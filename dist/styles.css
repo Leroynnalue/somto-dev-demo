@@ -6,6 +6,7 @@
     padding:0;
     color:var(--font);
     font-family: 'Be Vietnam', sans-serif;
+    cursor:none;
 }
 
 :root{
@@ -76,12 +77,48 @@ main{
     align-self: flex-end;
 }
 
+/* Pages */
+.toggle-container{
+    max-width:90%;
+    width:var(--medium);
+    display:flex;
+    flex-direction:column;
+}
+
+.toggle{
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+    margin:2em 0;
+}
+
+.container{
+    position: relative;
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+}
+
+.container span{
+    color:var(--border-color);
+}
+
+.container input{
+    margin:1em;
+}
+
+.toggle__title{
+    font-size:1.5em;
+}
+
+
 /* Socials */
 .socials{
     max-width:90%;
     width:var(--medium);
     display:flex;
     justify-content:space-between;
+    align-items:center;
     margin:2em 0;
 }
 
@@ -97,3 +134,29 @@ main{
     background-color:var(--background);
     border:1px solid var(--saturated-background);
 }
+
+#dev{
+    padding:0;
+    border:none;
+    font-size:1em;
+}
+
+#dev:hover{
+    color:var(--background);
+    background-color:transparent;
+}
+
+/* Cursor */
+.cursor {
+    width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: black;
+  opacity: .3;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width .3s, height .3s, opacity .3s;
+  }
+
+  

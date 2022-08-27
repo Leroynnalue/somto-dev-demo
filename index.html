@@ -34,16 +34,99 @@
             <span class="quote__author">~<span ng-model="quoteAuthor">{{quoteAuthor}}</span></span>
         </div>
 
+        <!-- Pages -->
+        <div class="toggle-container">
+            <!-- First -->
+            <div class="toggle">
+                <label class="container">
+                    <input type="checkbox" ng-model="persona">
+                    <span>
+                        <span class="toggle__title">Persona</span>
+                        <div ng-show="persona">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, perspiciatis
+                                temporibus. Esse
+                                quisquam, molestiae numquam libero saepe vero illum doloribus expedita quas
+                                necessitatibus quis
+                                quasi harum repellat sequi eos veniam.
+                            </p>
+                        </div>
+                    </span>
+                </label>
+            </div>
+            <!-- Presence -->
+            <div class="toggle">
+                <label class="container">
+                    <input type="checkbox" ng-model="presence">
+                    <span>
+                        <span class="toggle__title">Presence</span>
+                        <div ng-show="presence">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, perspiciatis
+                                temporibus. Esse
+                                quisquam, molestiae numquam libero saepe vero illum doloribus expedita quas
+                                necessitatibus quis
+                                quasi harum repellat sequi eos veniam.
+                            </p>
+                        </div>
+                    </span>
+                </label>
+            </div>
+            <!-- Portfolio -->
+            <div class="toggle">
+                <label class="container">
+                    <input type="checkbox" ng-model="portfolio">
+                    <span>
+                        <span class="toggle__title">Portfolio</span>
+                        <div ng-show="portfolio">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, perspiciatis
+                                temporibus. Esse
+                                quisquam, molestiae numquam libero saepe vero illum doloribus expedita quas
+                                necessitatibus quis
+                                quasi harum repellat sequi eos veniam.
+                            </p>
+                        </div>
+                    </span>
+                </label>
+            </div>
+            <!-- Other Stuffs -->
+            <div class="toggle">
+                <label class="container">
+                    <input type="checkbox" ng-model="others">
+                    <span>
+                        <span class="toggle__title">Other Stuffs</span>
+                        <div ng-show="others">
+                            <p>
+                                Welcome to the portal of my projects that you might be interest in :)
+                            </p>
+                            <a href="#"></a>
+                        </div>
+                    </span>
+                </label>
+            </div>
+        </div>
+
         <!-- Social Links -->
         <div class="socials">
             <!-- Twitter -->
-            <a href="https://twitter.com/leroydev_" class="fa fa-twitter" aria-hidden="true" target="_blank"
-                title="Twitter"></a>
+            <a rel="noopener" href="https://twitter.com/leroydev_" class="fa fa-twitter" aria-hidden="true"
+                target="_blank" title="Twitter"></a>
+
+            <!-- Dev -->
+            <span>
+                Built By
+                <a rel="noopener" target="_blank" id="dev"
+                    href="https://www.instagram.com/_codevoyage/">A-L-I-E-N-X-R</a>
+            </span>
+
             <!-- Github -->
-            <a href="https://github.com/Leroynnalue" class="fa fa-github" aria-hidden="true" target="_blank"
-                title="Github"></a>
+            <a rel="noopener" href="https://github.com/Leroynnalue" class="fa fa-github" aria-hidden="true"
+                target="_blank" title="Github"></a>
         </div>
 
+        <!-- Cursor -->
+        <div class="cursor"></div>
     </main>
 </body>
 
