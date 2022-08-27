@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="alien">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somtochukwu</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Script Links -->
+    <script defer src="../assets/angular.js"></script>
+    <script defer src="./script.js"></script>
+</head>
+
+<body>
+    <main>
+        <!-- Profile Picture -->
+        <div class="profile" title="Somtochukwu Nnalue">
+            <img class="profile__image" src="../images/logo.png" alt="Profile Picture">
+        </div>
+
+        <!-- Quote Box -->
+        <div class="quote" ng-controller="Quotes">
+            <em class="quote__info" ng-model="quoteInfo">
+                {{quoteInfo}}
+            </em>
+            <span class="quote__author">~<span ng-model="quoteAuthor">{{quoteAuthor}}</span></span>
+        </div>
+
+        <!-- Social Links -->
+        <div class="socials">
+            <!-- Twitter -->
+            <a href="https://twitter.com/leroydev_" class="fa fa-twitter" aria-hidden="true" target="_blank"
+                title="Twitter"></a>
+            <!-- Github -->
+            <a href="https://github.com/Leroynnalue" class="fa fa-github" aria-hidden="true" target="_blank"
+                title="Github"></a>
+        </div>
+
+    </main>
+</body>
+
+</html>
