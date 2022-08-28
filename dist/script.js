@@ -31,3 +31,16 @@ document.addEventListener('mouseup', function(){
   cursor.classList.remove('click')
   cusor.classList.remove('cusorhover')
 });
+
+// Preloader
+const preloader = document.querySelector('[preloader]')
+
+window.onloadstart = loadPreloader()
+window.onload = loadPreloader()
+
+function loadPreloader(){
+  preloader.classList.add('active');
+  setTimeout(() => {
+    preloader.classList.remove('active');
+  },1000)
+}

@@ -111,6 +111,15 @@ main{
     font-size:1.5em;
 }
 
+.columns{
+    display:flex;
+    flex-direction: column;
+}
+
+.columns a{
+    margin:.24em 0;
+}
+
 
 /* Socials */
 .socials{
@@ -159,4 +168,64 @@ main{
   transition: width .3s, height .3s, opacity .3s;
   }
 
-  
+  /* Preloader */
+  .preloader{
+    width:100%;
+    height:100vh;
+    background-color:var(--background);
+    display:none;
+    place-content:center;
+    position:fixed;
+    top:0;
+    z-index:100;
+  }
+
+  .preloader h1{
+    font-weight:100;
+    font-size:3em;
+}
+
+.active{
+    display:grid;
+}
+
+.active h1{
+    animation:zoomy 1s infinite ease-in-out;
+  }
+
+
+  @keyframes zoomy {
+    0%{
+        transform:scale(0.05);
+    }
+    10%{
+        transform:scale(0.1);
+    }
+    20%{
+        transform:scale(0.2);
+    }
+    30%{
+        transform:scale(0.3);
+    }
+    40%{
+        transform:scale(0.4);
+    }
+    50%{
+        transform:scale(0.5);
+    }
+    60%{
+        transform:scale(0.6);
+    }
+    70%{
+        transform:scale(0.7);
+    }
+    80%{
+        transform:scale(0.8);
+    }
+    90%{
+        transform:scale(0.9);
+    }
+    100%{
+        transform:scale(1);
+    }
+  }
