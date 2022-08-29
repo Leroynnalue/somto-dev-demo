@@ -161,7 +161,6 @@ main{
 }
 
 .skill__progress{
-    width:100%;
     height:.5em;
     margin:1em 0;
     border-radius:var(--normal);
@@ -171,25 +170,35 @@ main{
 }
 
 .skill__progress--progress__bar{
-    width:80%;
+    width:100%;
+    height:100%;
+    position: relative;
+    /* background-color:red; */
+}
+
+.skill__progress--progress__bar::after{
+    width: 50%;
+    content:'';
+    display:block;
+    position: absolute;
     height:100%;
     background-color:var(--font);
 }
 
-#g-g{
+#g-g .skill__progress--progress__bar::after{
     width:60%;
 }
 
-#h-c-j{
+#h-t-c .skill__progress--progress__bar::after{
     width:90%;
 }
 
-#w-a-j{
+#w-a-j .skill__progress--progress__bar::after{
     width:85%;
 }
 
-#t-j{
-    width:80%;
+#t-j .skill__progress--progress__bar::after{
+    width:75%;
 }
 
 /* Socials */
