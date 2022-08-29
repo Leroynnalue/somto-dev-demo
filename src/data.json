@@ -1,0 +1,45 @@
+{
+    "subPages": [
+        {
+            "pageSerial":"persona",
+            "pageTitle":"Persona",
+            "pageContent": [
+                "I am a software engineering student with over a year of experience, creating projects that could enhance my problem solving skill and also increase my value as a software developer to my future clients. I could also define myself as an inquisitive human who is interested in ;"
+            ]
+        },
+        {
+            "pageSerial":"presence",
+            "pageTitle":"Presence",
+            "pageContent": [
+                "I am currently a student @ Aptech. I really feel like dropping out but I need that Certificate sha,"
+            ]
+        },
+        {
+
+        }
+    ],
+    "skills":[
+        {
+            "skillTitle":"HTML + CSS + Javascript",
+            "skillPercent":"85"
+        },
+        {
+            "skillTitle":"AngularJs + Tailwind",
+            "skillPercent":"60"
+        },
+        {
+            "skillTitle":"Figma",
+            "skillPercent":"80%"
+        },
+        {
+            "skillTitle":"HTML + CSS + Javascript",
+            "skillPercent":"85%"
+        }
+    ],
+    "projects":[
+        {
+            "projectName":"Numble",
+            "projectLink":"#"
+        }
+    ]
+}

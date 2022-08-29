@@ -41,20 +41,20 @@
 
         <!-- Pages -->
         <div class="toggle-container">
-            <!-- First -->
+            <!-- Persona -->
             <div class="toggle">
                 <label class="container">
-                    <input type="checkbox" ng-model="persona">
-                    <span>
-                        <span class="toggle__title">Persona</span>
+                    <input type="checkbox" ng-model="persona" checked="checked" checkers>
+                    <span class="toggle--container">
+                        <span class="toggle__title" title="An Insight Of My Personality">Persona</span>
                         <div ng-show="persona">
                             <p>
-                                My Personality? Hehe, I feel like an Alien. I can't really be understood not even by
-                                myself but that's a story for another day. I am currently, working on my consistency
-                                issue though. I am SMART :) and I miss my ex (Lase)
+                                I am a software engineering student with over a year of experience, creating projects
+                                that could enhance my problem solving skill and also increase my value as a software
+                                developer to my future clients.
                                 <br>
-                                <br>
-                                She made me part of who I am today, but She isn't here to see me grow like we planned :(
+                                I could also define myself as an inquisitive human who
+                                is interested in solving real life problems digitally, old tech items (nostalgia).
                             </p>
                         </div>
                     </span>
@@ -64,9 +64,9 @@
             <!-- Presence -->
             <div class="toggle">
                 <label class="container">
-                    <input type="checkbox" ng-model="presence">
-                    <span>
-                        <span class="toggle__title">Presence</span>
+                    <input type="checkbox" ng-model="presence" checkers>
+                    <span class="toggle--container">
+                        <span class="toggle__title" title="My Location?">Presence</span>
                         <div ng-show="presence">
                             <p>
                                 I am currently a student @ Aptech. I really feel like dropping out but I need that
@@ -77,12 +77,56 @@
                 </label>
             </div>
 
+            <!-- Skills -->
+            <div class="toggle">
+                <label class="container container--wide">
+                    <input type="checkbox" ng-model="skills" checkers>
+                    <span class="toggle--container">
+                        <span class="toggle__title" title="Capability?">Skills</span>
+                        <div class="skills" ng-show="skills">
+                            <!-- Skill One -->
+                            <div class="skill" id="h-t-c">
+                                <span class="skill__header">HTML + CSS + Javascript</span>
+                                <div class="skill__progress" role="progressbar" aria-label="Skill">
+                                    <div class="skill__progress--progress__bar"></div>
+                                </div>
+                            </div>
+
+                            <!-- Skill Two -->
+                            <div class="skill" id="g-g">
+                                <span class="skill__header">Git & Github</span>
+                                <div class="skill__progress" role="progressbar" aria-label="Skill">
+                                    <div class="skill__progress--progress__bar"></div>
+                                </div>
+                            </div>
+
+                            <!-- Skill Three -->
+                            <div class="skill" id="w-a-j">
+                                <span class="skill__header">Webpack + AngularJs & Javacript</span>
+                                <div class="skill__progress" role="progressbar" aria-label="Skill">
+                                    <div class="skill__progress--progress__bar"></div>
+                                </div>
+                            </div>
+
+                            <!-- Skill Four -->
+                            <div class="skill" id="w-a-j">
+                                <span class="skill__header">Tailwindcss & Javascript</span>
+                                <div class="skill__progress" role="progressbar" aria-label="Skill">
+                                    <div class="skill__progress--progress__bar"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </span>
+                </label>
+            </div>
+
             <!-- Portfolio -->
             <div class="toggle">
                 <label class="container">
-                    <input type="checkbox" ng-model="portfolio">
-                    <span>
-                        <span class="toggle__title">Portfolio</span>
+                    <input type="checkbox" ng-model="portfolio" checkers>
+                    <span class="toggle--container">
+                        <span class="toggle__title" title="Portfolio">Portfolio</span>
                         <div ng-show="portfolio">
                             <p>
                                 On It Way :) Maybe :()
@@ -95,24 +139,33 @@
             <!-- Other Stuffs -->
             <div class="toggle">
                 <label class="container">
-                    <input type="checkbox" ng-model="others">
-                    <span>
-                        <span class="toggle__title">Other Stuffs</span>
+                    <input type="checkbox" ng-model="others" checkers>
+                    <span class="toggle--container">
+                        <span class="toggle__title" title="What I Do @ 3AM">Other Stuffs</span>
                         <div ng-show="others">
                             <p>
-                                The Realms Of Finished Masterpieces :) Maybe?
+                                The Realms Of Finished Personal Projects :) Maybe?
                             </p>
                             <div class="columns">
-                                <a href="#">Numble - A Daily Five Combination Number Game</a>
-                                <a href="#">Shortly - A platform to Shorten Url</a>
-                                <a href="#">Daily Routine - Get Your Day Set With Tasks Sorted</a>
-                                <a href="#">Tip Calculator - Calculate Tips Here</a>
-                                <a href="#">Snake - Play A Simple Snake Game</a>
+                                <a rel="noopener" target="_blank" href="https://alienxrnumble.netlify.app/">Numble - A
+                                    Daily Five
+                                    Combination Number Game</a>
+                                <a rel="noopener" target="_blank" href="https://alienxrshortly.netlify.app/">Shortly - A
+                                    platform to Shorten Url</a>
+                                <a href="https://alienxrdailyroutine.netlify.app/">Daily Routine - Get Your Day Set With
+                                    Tasks Sorted</a>
+                                <a rel="noopener" target="_blank" href="https://alienxrtipcalc.netlify.app/">Tip
+                                    Calculator - Calculate Tips Here</a>
+                                <a rel="noopener" target="_blank" href="https://alienxrsnake.netlify.app/">Snake - Play
+                                    A Simple Snake Game</a>
+                                <a rel="noopener" target="_blank"
+                                    href="https://alienxrtictactoe.netlify.app/">Tic-Tac-Toe</a>
                             </div>
                         </div>
                     </span>
                 </label>
             </div>
+
         </div>
 
         <!-- Social Links -->
@@ -120,13 +173,6 @@
             <!-- Twitter -->
             <a rel="noopener" href="https://twitter.com/leroydev_" class="fa fa-twitter" aria-hidden="true"
                 target="_blank" title="Twitter"></a>
-
-            <!-- Dev -->
-            <span>
-                Built By
-                <a rel="noopener" target="_blank" id="dev"
-                    href="https://www.instagram.com/_codevoyage/">A-L-I-E-N-X-R</a>
-            </span>
 
             <!-- Github -->
             <a rel="noopener" href="https://github.com/Leroynnalue" class="fa fa-github" aria-hidden="true"

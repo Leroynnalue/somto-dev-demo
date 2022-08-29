@@ -7,29 +7,26 @@ app.controller('Quotes',($scope,$http) => {
 })
 
 // Custom Cursor
-var cusor = document.querySelector('.cursor');
+var cursor = document.querySelector('.cursor');
 
 document.addEventListener('mousemove', function(e){
   var x = e.clientX;
   var y = e.clientY;
-  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
 });
 
 document.addEventListener('mousemove', function(e){
   var x = e.clientX;
   var y = e.clientY;
-  cusor.style.left = x + 'px';
-  cusor.style.top = y + 'px';
+  cursor.style.left = x + 'px';
+  cursor.style.top = y + 'px';
 });
 
 document.addEventListener('mousedown', function(){
-  cursor.classList.add('click');
-  cusor.classList.add('cusorhover')
+  cursor.classList.add('cursorhover')
 });
 
 document.addEventListener('mouseup', function(){
-  cursor.classList.remove('click')
-  cusor.classList.remove('cusorhover')
+  cursor.classList.remove('cursorhover')
 });
 
 // Preloader
@@ -44,3 +41,9 @@ function loadPreloader(){
     preloader.classList.remove('active');
   },1000)
 }
+
+// Checkers
+const checkers = document.querySelectorAll('[checkers]');
+checkers.forEach((index) => {
+  index.style.display = 'none'
+})
