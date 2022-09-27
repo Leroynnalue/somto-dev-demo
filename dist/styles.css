@@ -14,7 +14,8 @@
     --background:#1A1A1A;
     --border-color:#E5E7EB;
     --saturated-background:#2C2C2C;
-    --font:#6D6D6D;
+    /* --font:#6D6D6D; */ /* dark font color */
+    --font:#E5E7EB;
     --header:'Poppins', sans-serif;
     --medium:968px;
     --normal:.24em;
@@ -106,13 +107,22 @@ main{
     width:100%;
 }
 
-.container span{
+.container span,
+.container p,
+#projects a{
     color:var(--border-color);
 }
 
 .container input{
     margin:1em;
 }
+
+#projects,
+.container p,
+#projects a{
+    margin-top:.5rem;
+}
+
 
 .toggle__title{
     font-size:1.5em;
@@ -123,7 +133,7 @@ main{
 .toggle__title:hover,
 .toggle__title:focus
 {
-    color:var(--font);
+    font-style: oblique;
 }
 
 .columns{
@@ -158,6 +168,16 @@ main{
 
 .skill__header{
     opacity:.8;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:.25em;
+}
+
+.skill__header .new{
+    padding:.25em;
+    outline:1px solid var(--saturated-background);
+    box-shadow:1px 1px 3px var(--font);
 }
 
 .skill__progress{
@@ -199,6 +219,10 @@ main{
 
 #t-j .skill__progress--progress__bar::after{
     width:75%;
+}
+
+#newSkill .skill__progress--progress__bar::after{
+    width:10%;
 }
 
 /* Socials */
