@@ -1,209 +1,275 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="alien">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Somtochukwu</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon" />
     <!-- CSS -->
-    <link rel="stylesheet" href="./dist/styles.css">
+    <link rel="stylesheet" href="./dist/styles.css" />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Script Links -->
     <script defer src="./assets/angular.js"></script>
     <script defer src="./dist/script.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <main>
-        <!-- Preloader -->
-        <div class="preloader active" preloader>
-            <h1>Somtochukwu</h1>
+      <!-- Preloader -->
+      <div class="preloader active" preloader>
+        <h1>Somtochukwu</h1>
+      </div>
+
+      <!-- Profile Picture -->
+      <div class="profile" title="Somtochukwu Nnalue">
+        <img
+          class="profile__image"
+          src="../images/logo.png"
+          alt="Profile Picture"
+        />
+      </div>
+
+      <!-- Quote Box -->
+      <div class="quote" ng-controller="Quotes">
+        <em class="quote__info" ng-model="quoteInfo"> {{quoteInfo}} </em>
+        <span class="quote__author"
+          >~<span ng-model="quoteAuthor">{{quoteAuthor}}</span></span
+        >
+      </div>
+
+      <!-- Pages -->
+      <div class="toggle-container">
+        <!-- Persona -->
+        <div class="toggle">
+          <label class="container">
+            <input
+              type="checkbox"
+              ng-model="persona"
+              checked="checked"
+              checkers
+            />
+            <span class="toggle--container">
+              <span class="toggle__title" title="An Insight Of My Personality"
+                >Persona</span
+              >
+              <div ng-show="persona" id="paragraphs">
+                <p>
+                  I am a software engineering student with over a year of
+                  experience, creating projects that could enhance my problem
+                  solving skill and also increase my value as a software
+                  developer to my future clients.
+                  <br />
+                  I could also define myself as an inquisitive human who is
+                  interested in solving real life problems digitally, old tech
+                  items (nostalgia).
+                </p>
+              </div>
+            </span>
+          </label>
         </div>
 
-        <!-- Profile Picture -->
-        <div class="profile" title="Somtochukwu Nnalue">
-            <img class="profile__image" src="../images/logo.png" alt="Profile Picture">
+        <!-- Presence -->
+        <div class="toggle">
+          <label class="container">
+            <input type="checkbox" ng-model="presence" checkers />
+            <span class="toggle--container">
+              <span class="toggle__title" title="My Location?">Presence</span>
+              <div ng-show="presence">
+                <p>Student @ <a href="https://aptechajah.com/">Aptech</a></p>
+              </div>
+            </span>
+          </label>
         </div>
 
-        <!-- Quote Box -->
-        <div class="quote" ng-controller="Quotes">
-            <em class="quote__info" ng-model="quoteInfo">
-                {{quoteInfo}}
-            </em>
-            <span class="quote__author">~<span ng-model="quoteAuthor">{{quoteAuthor}}</span></span>
+        <!-- Skills -->
+        <div class="toggle">
+          <label class="container container--wide">
+            <input type="checkbox" ng-model="skills" checkers />
+            <span class="toggle--container">
+              <span class="toggle__title" title="Capability?">Skills</span>
+              <div class="skills" ng-show="skills">
+                <!-- Skill One -->
+                <div class="skill" id="h-t-c">
+                  <span class="skill__header"
+                    >HTML + CSS + Javascript + AngularJs</span
+                  >
+                  <div
+                    class="skill__progress"
+                    role="progressbar"
+                    aria-label="Skill"
+                  >
+                    <div class="skill__progress--progress__bar"></div>
+                  </div>
+                </div>
+
+                <!-- Skill Two -->
+                <div class="skill" id="g-g">
+                  <span class="skill__header">Git & Github</span>
+                  <div
+                    class="skill__progress"
+                    role="progressbar"
+                    aria-label="Skill"
+                  >
+                    <div class="skill__progress--progress__bar"></div>
+                  </div>
+                </div>
+
+                <!-- Skill Three -->
+                <div class="skill" id="w-a-j">
+                  <span class="skill__header">Webpack</span>
+                  <div
+                    class="skill__progress"
+                    role="progressbar"
+                    aria-label="Skill"
+                  >
+                    <div class="skill__progress--progress__bar"></div>
+                  </div>
+                </div>
+
+                <!-- Skill Four -->
+                <div class="skill" id="w-a-j">
+                  <span class="skill__header">Tailwindcss & ReactJs</span>
+                  <div
+                    class="skill__progress"
+                    role="progressbar"
+                    aria-label="Skill"
+                  >
+                    <div class="skill__progress--progress__bar"></div>
+                  </div>
+                </div>
+
+                <!-- Skill Five -->
+                <div class="skill" id="newSkill">
+                  <span class="skill__header">
+                    <span>NodeJS & Express</span>
+                    <span class="new">New</span>
+                  </span>
+                  <div
+                    class="skill__progress"
+                    role="progressbar"
+                    aria-label="Skill"
+                  >
+                    <div class="skill__progress--progress__bar"></div>
+                  </div>
+                </div>
+
+                <!-- Skill Six -->
+                <div class="skill" id="newSkill">
+                  <span class="skill__header">
+                    <span>MongoDB & Mongoose</span>
+                    <span class="new">New</span>
+                  </span>
+                  <div
+                    class="skill__progress"
+                    role="progressbar"
+                    aria-label="Skill"
+                  >
+                    <div class="skill__progress--progress__bar"></div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </label>
         </div>
 
-        <!-- Pages -->
-        <div class="toggle-container">
-            <!-- Persona -->
-            <div class="toggle">
-                <label class="container">
-                    <input type="checkbox" ng-model="persona" checked="checked" checkers>
-                    <span class="toggle--container">
-                        <span class="toggle__title" title="An Insight Of My Personality">Persona</span>
-                        <div ng-show="persona" id="paragraphs">
-                            <p>
-                                I am a software engineering student with over a year of experience, creating projects
-                                that could enhance my problem solving skill and also increase my value as a software
-                                developer to my future clients.
-                                <br>
-                                I could also define myself as an inquisitive human who
-                                is interested in solving real life problems digitally, old tech items (nostalgia).
-                            </p>
-                        </div>
-                    </span>
-                </label>
-            </div>
-
-            <!-- Presence -->
-            <div class="toggle">
-                <label class="container">
-                    <input type="checkbox" ng-model="presence" checkers>
-                    <span class="toggle--container">
-                        <span class="toggle__title" title="My Location?">Presence</span>
-                        <div ng-show="presence">
-                            <p>
-                                I am currently a student @ Aptech. I really feel like dropping out but I need that
-                                Certificate sha,
-                            </p>
-                        </div>
-                    </span>
-                </label>
-            </div>
-
-            <!-- Skills -->
-            <div class="toggle">
-                <label class="container container--wide">
-                    <input type="checkbox" ng-model="skills" checkers>
-                    <span class="toggle--container">
-                        <span class="toggle__title" title="Capability?">Skills</span>
-                        <div class="skills" ng-show="skills">
-                            <!-- Skill One -->
-                            <div class="skill" id="h-t-c">
-                                <span class="skill__header">HTML + CSS + Javascript + AngularJs</span>
-                                <div class="skill__progress" role="progressbar" aria-label="Skill">
-                                    <div class="skill__progress--progress__bar"></div>
-                                </div>
-                            </div>
-
-                            <!-- Skill Two -->
-                            <div class="skill" id="g-g">
-                                <span class="skill__header">Git & Github</span>
-                                <div class="skill__progress" role="progressbar" aria-label="Skill">
-                                    <div class="skill__progress--progress__bar"></div>
-                                </div>
-                            </div>
-
-                            <!-- Skill Three -->
-                            <div class="skill" id="w-a-j">
-                                <span class="skill__header">Webpack</span>
-                                <div class="skill__progress" role="progressbar" aria-label="Skill">
-                                    <div class="skill__progress--progress__bar"></div>
-                                </div>
-                            </div>
-
-                            <!-- Skill Four -->
-                            <div class="skill" id="w-a-j">
-                                <span class="skill__header">Tailwindcss</span>
-                                <div class="skill__progress" role="progressbar" aria-label="Skill">
-                                    <div class="skill__progress--progress__bar"></div>
-                                </div>
-                            </div>
-
-                            <!-- Skill Five -->
-                            <div class="skill" id="newSkill">
-                                <span class="skill__header">
-                                    <span>NodeJS & Express</span>
-                                    <span class="new">New</span>
-                                </span>
-                                <div class="skill__progress" role="progressbar" aria-label="Skill">
-                                    <div class="skill__progress--progress__bar"></div>
-                                </div>
-                            </div>
-
-                            <!-- Skill Six -->
-                            <div class="skill" id="newSkill">
-                                <span class="skill__header">
-                                    <span>MongoDB & Mongoose</span>
-                                    <span class="new">New</span>
-                                </span>
-                                <div class="skill__progress" role="progressbar" aria-label="Skill">
-                                    <div class="skill__progress--progress__bar"></div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </span>
-                </label>
-            </div>
-
-            <!-- Portfolio -->
-            <div class="toggle">
-                <label class="container">
-                    <input type="checkbox" ng-model="portfolio" checkers>
-                    <span class="toggle--container">
-                        <span class="toggle__title" title="Portfolio">Portfolio</span>
-                        <div ng-show="portfolio">
-                            <p>
-                                On It Way :) Maybe :()
-                            </p>
-                        </div>
-                    </span>
-                </label>
-            </div>
-
-            <!-- Other Stuffs -->
-            <div class="toggle">
-                <label class="container">
-                    <input type="checkbox" ng-model="others" checkers>
-                    <span class="toggle--container">
-                        <span class="toggle__title" title="What I Do @ 3AM">Other Stuffs</span>
-                        <div ng-show="others">
-                            <p>
-                                The Realms Of Finished Personal Projects :) Maybe?
-                            </p>
-                            <div class="columns" id="projects">
-                                <a rel="noopener" target="_blank" href="https://alienxrnumble.netlify.app/">Numble - A
-                                    Daily Five
-                                    Combination Number Game</a>
-                                <a rel="noopener" target="_blank" href="https://alienxrshortly.netlify.app/">Shortly - A
-                                    platform to Shorten Url</a>
-                                <a href="https://alienxrdailyroutine.netlify.app/">Daily Routine - Get Your Day Set With
-                                    Tasks Sorted</a>
-                                <a rel="noopener" target="_blank" href="https://alienxrtipcalc.netlify.app/">Tip
-                                    Calculator - Calculate Tips Here</a>
-                                <a rel="noopener" target="_blank" href="https://alienxrsnake.netlify.app/">Snake - Play
-                                    A Simple Snake Game</a>
-                                <a rel="noopener" target="_blank"
-                                    href="https://alienxrtictactoe.netlify.app/">Tic-Tac-Toe</a>
-                            </div>
-                        </div>
-                    </span>
-                </label>
-            </div>
-
+        <!-- Portfolio -->
+        <div class="toggle">
+          <label class="container">
+            <input type="checkbox" ng-model="portfolio" checkers />
+            <span class="toggle--container">
+              <span class="toggle__title" title="Portfolio">Portfolio</span>
+              <div ng-show="portfolio">
+                <p>On It Way :) Maybe :()</p>
+              </div>
+            </span>
+          </label>
         </div>
 
-        <!-- Social Links -->
-        <div class="socials">
-            <!-- Twitter -->
-            <a rel="noopener" href="https://twitter.com/leroydev_" class="fa fa-twitter" aria-hidden="true"
-                target="_blank" title="Twitter"></a>
-
-            <!-- Github -->
-            <a rel="noopener" href="https://github.com/Leroynnalue" class="fa fa-github" aria-hidden="true"
-                target="_blank" title="Github"></a>
+        <!-- Other Stuffs -->
+        <div class="toggle">
+          <label class="container">
+            <input type="checkbox" ng-model="others" checkers />
+            <span class="toggle--container">
+              <span class="toggle__title" title="What I Do @ 3AM"
+                >Other Stuffs</span
+              >
+              <div ng-show="others">
+                <p>The Realms Of Finished Personal Projects :) Maybe?</p>
+                <div class="columns" id="projects">
+                  <a
+                    rel="noopener"
+                    target="_blank"
+                    href="https://alienxrnumble.netlify.app/"
+                    >Numble - A Daily Five Combination Number Game</a
+                  >
+                  <a
+                    rel="noopener"
+                    target="_blank"
+                    href="https://alienxrshortly.netlify.app/"
+                    >Shortly - A platform to Shorten Url</a
+                  >
+                  <a href="https://alienxrdailyroutine.netlify.app/"
+                    >Daily Routine - Get Your Day Set With Tasks Sorted</a
+                  >
+                  <a
+                    rel="noopener"
+                    target="_blank"
+                    href="https://alienxrtipcalc.netlify.app/"
+                    >Tip Calculator - Calculate Tips Here</a
+                  >
+                  <a
+                    rel="noopener"
+                    target="_blank"
+                    href="https://alienxrsnake.netlify.app/"
+                    >Snake - Play A Simple Snake Game</a
+                  >
+                  <a
+                    rel="noopener"
+                    target="_blank"
+                    href="https://alienxrtictactoe.netlify.app/"
+                    >Tic-Tac-Toe</a
+                  >
+                </div>
+              </div>
+            </span>
+          </label>
         </div>
+      </div>
 
-        <!-- Cursor -->
-        <div class="cursor"></div>
+      <!-- Social Links -->
+      <div class="socials">
+        <!-- Twitter -->
+        <a
+          rel="noopener"
+          href="https://twitter.com/leroydev_"
+          class="fa fa-twitter"
+          aria-hidden="true"
+          target="_blank"
+          title="Twitter"
+        ></a>
+
+        <!-- Github -->
+        <a
+          rel="noopener"
+          href="https://github.com/Leroynnalue"
+          class="fa fa-github"
+          aria-hidden="true"
+          target="_blank"
+          title="Github"
+        ></a>
+      </div>
+
+      <!-- Cursor -->
+      <div class="cursor"></div>
     </main>
-</body>
-
+  </body>
 </html>
