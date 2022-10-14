@@ -1,11 +1,11 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@100;200;300;400;500;600;800&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Space+Mono:wght@100;200;300;400;500;600;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Manrope:wght@100;200;300;400;500;600;800&display=swap);
 
 *{
     margin:0;
     padding:0;
     color:var(--font);
-    font-family: 'Be Vietnam', sans-serif;
+    font-family: 'Manrope', sans-serif;
     cursor:none;
     user-select: none;
 }
@@ -16,13 +16,9 @@
     --saturated-background:#2C2C2C;
     /* --font:#6D6D6D; */ /* dark font color */
     --font:#E5E7EB;
-    --header:'Poppins', sans-serif;
+    --header:'Manrope', sans-serif;
     --medium:968px;
     --normal:.24em;
-}
-
-h1,h2,h3,h4,h5,h6{
-    font-family:'Poppins', sans-serif;
 }
 
 body{
@@ -77,6 +73,7 @@ main{
     opacity:.8;
     font-size:1.24em;
     color:var(--border-color);
+    font-family: 'Space Mono', monospace;
 }
 
 .quote__author{
